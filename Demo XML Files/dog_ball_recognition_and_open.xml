@@ -1,0 +1,243 @@
+<xml xmlns="http://www.w3.org/1999/xhtml" type="AI">
+  <block type="robot_dog_setup" id="5j+NaE~~N1l-[x55T,5a" x="65" y="43">
+    <next>
+      <block type="variables_set" id="rUje9~q`j]g8QKxz[S2~">
+        <field name="VAR">Timer</field>
+        <value name="VALUE">
+          <shadow type="math_number" id="c?r3$%+7Vw|pc4hVU7=4">
+            <field name="NUM">300</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="controls_repeat_forever" id="8(?T`WEM+yHuSK^B~9Y;">
+            <statement name="DO">
+              <block type="ai_model_class" id="sS[rA4?dn4NU^q.cMBOj">
+                <value name="class_input">
+                  <block type="lists_create_with" id="rfjwF`D*0-}WKz|x5d;?">
+                    <mutation items="2"></mutation>
+                    <value name="ADD0">
+                      <block type="text" id="-!ot+N]Er)K/X7.ZF`I.">
+                        <field name="TEXT">Ball</field>
+                      </block>
+                    </value>
+                    <value name="ADD1">
+                      <block type="text" id="4Y~(vMS`e9+d,BnYp[{w">
+                        <field name="TEXT">NotBall</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="serial_write_data" id="|TS%TA9vt,#]y+0)=i/c">
+                    <mutation items="1"></mutation>
+                    <field name="type">ai</field>
+                    <field name="uart_bps">115200</field>
+                    <value name="ADD0">
+                      <shadow type="text" id="*edW,C#v^Gr3qh@0W1eL">
+                        <field name="TEXT">command close</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="controls_if" id="`T()1(=b[c-Ni#]1uDEF">
+                        <mutation else="1"></mutation>
+                        <value name="IF0">
+                          <block type="logic_compare" id="((Sb$^(3.*7cK{f6F}E|">
+                            <field name="OP">EQ</field>
+                            <value name="A">
+                              <block type="variables_get" id="Nh]L3A@7mMJeZ-;%2Jy-">
+                                <field name="VAR">Timer</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="math_number" id="k5Q8lQKin;QcKqYaZ32r">
+                                <field name="NUM">0</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <statement name="DO0">
+                          <block type="controls_if" id="OA.k_J23Wkw=D_gat;@E">
+                            <mutation elseif="1"></mutation>
+                            <value name="IF0">
+                              <block type="logic_compare" id="M3tGgu%A0]31exE$SUQm">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="text" id="y!Pua748g^;6pm*igj4Y">
+                                    <field name="TEXT">Ball</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="ai_model_getclass" id="GYK;Xf/ChGVjQc(7j#.F"></block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO0">
+                              <block type="serial_write_data" id="8O;:E)]-wLRqjf=S_K%4">
+                                <mutation items="1"></mutation>
+                                <field name="type">ai</field>
+                                <field name="uart_bps">115200</field>
+                                <value name="ADD0">
+                                  <shadow type="text" id="u:h(lo`-nF6cziIZ6HX(">
+                                    <field name="TEXT">command open</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="time_delay" id="]}+:cGK9Azqy,Eitt?n0">
+                                    <value name="DELAY_TIME_MILI">
+                                      <block type="math_number" id="S2BotT]vRex$W}Z,Rxd?">
+                                        <field name="NUM">2000</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="serial_write_data" id="07Z{+rXEUlb=jaG#l9RX">
+                                        <mutation items="1"></mutation>
+                                        <field name="type">ai</field>
+                                        <field name="uart_bps">115200</field>
+                                        <value name="ADD0">
+                                          <shadow type="text" id="WSG-7sQ3BznGtIpu+_g@">
+                                            <field name="TEXT">command grab</field>
+                                          </shadow>
+                                        </value>
+                                        <next>
+                                          <block type="time_delay" id="+s)/U21Qv#w]|O{9Z:Wo">
+                                            <value name="DELAY_TIME_MILI">
+                                              <block type="math_number" id="6BpbS@E:u,@nF]$PNkQ?">
+                                                <field name="NUM">10000</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="serial_write_data" id="mpY[35f4~3(-b%(`#9lE">
+                                                <mutation items="1"></mutation>
+                                                <field name="type">ai</field>
+                                                <field name="uart_bps">115200</field>
+                                                <value name="ADD0">
+                                                  <shadow type="text" id="/jZAm$mv+H#*u3JKei(#">
+                                                    <field name="TEXT">command open</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="time_delay" id=",*:9:P98H#tXQ/@zkk!Z">
+                                                    <value name="DELAY_TIME_MILI">
+                                                      <block type="math_number" id="S?y9bGI$||+,0jl,K{*v">
+                                                        <field name="NUM">3000</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="serial_write_data" id="c/xtv_q}YMk`^_ITiV=%">
+                                                        <mutation items="1"></mutation>
+                                                        <field name="type">ai</field>
+                                                        <field name="uart_bps">115200</field>
+                                                        <value name="ADD0">
+                                                          <shadow type="text" id="1-xtc8GfD#a,p1^c1%Wa">
+                                                            <field name="TEXT">command close</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="time_delay" id="+nt;Nbe{OMC2H5``o#]z">
+                                                            <value name="DELAY_TIME_MILI">
+                                                              <block type="math_number" id="5##~R|zFv55im:pQ}|4q">
+                                                                <field name="NUM">2000</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="robot_dog_action" id="fodvyqwm}ElQK1ELAU%X">
+                                                                <field name="type">17</field>
+                                                                <next>
+                                                                  <block type="time_delay" id="(.mm[uS;V]iaiVDECf=a">
+                                                                    <value name="DELAY_TIME_MILI">
+                                                                      <block type="math_number" id="(]OnFS6S8n]V,y!0-S%U">
+                                                                        <field name="NUM">6000</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </statement>
+                            <value name="IF1">
+                              <block type="logic_compare" id="K3Dta05QG4j$qA6AL%,w">
+                                <field name="OP">EQ</field>
+                                <value name="A">
+                                  <block type="text" id="R46p0Csv)PvHYbPu-4P}">
+                                    <field name="TEXT">NotBall</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="ai_model_getclass" id="d.[7/}u?/Fj2cj03J6]A"></block>
+                                </value>
+                              </block>
+                            </value>
+                            <statement name="DO1">
+                              <block type="time_delay" id="zeQ3VPfKrKABCd}CHR=M">
+                                <value name="DELAY_TIME_MILI">
+                                  <block type="math_number" id="EDjwo8KVBYYAjVy^e_Ef">
+                                    <field name="NUM">1000</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </statement>
+                            <next>
+                              <block type="variables_set" id="w={[o/{k*qle]/%]|R|*">
+                                <field name="VAR">Timer</field>
+                                <value name="VALUE">
+                                  <shadow type="math_number" id="8}$pC}Pq=HG9=sksaRFR">
+                                    <field name="NUM">100</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </statement>
+                        <statement name="ELSE">
+                          <block type="variables_set" id="6PI0)B-3mtFNuK22b:Zk">
+                            <field name="VAR">Timer</field>
+                            <value name="VALUE">
+                              <shadow type="math_number" id="}NWut52]ZS@NLWLnJ43H">
+                                <field name="NUM">0</field>
+                              </shadow>
+                              <block type="math_arithmetic" id="GBN.Ub)M:50md}S4yD0G">
+                                <field name="OP">MINUS</field>
+                                <value name="A">
+                                  <shadow type="math_number" id="631Z/(-fr;XtPd`W|(:U">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                  <block type="variables_get" id="%|zYzw|PjMxEx4cFr?K|">
+                                    <field name="VAR">Timer</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <shadow type="math_number" id="E}fecb935X8UPRxgg8Xz">
+                                    <field name="NUM">1</field>
+                                  </shadow>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </statement>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
