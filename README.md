@@ -22,3 +22,20 @@ https://drive.google.com/file/d/1dwJAyGvHu0s48ufkFITGkstINDWe5Ncc/view?usp=shari
 - Hand, Face recognition via OpenCV
 - Voice recognition & commands
 - Gesture control
+- Fixed (static) ultrasonic sensor, and non-fixed (z-axis) mounted camera module
+
+## Visual Demo Goals
+1. Can walk around without any input from users
+2. Can avoid obstacles/walls, turn around, and keep walking in a different direction
+3. Voice commands as primary means of control
+4. Say "come", and the dog begins looking for a face or a specific gesture. Will walk towards the recognized face, and then sit. 
+5. Can follow somebody it recognizes
+6. "Eyes" (camera) can move up/down in order to see more of environment
+7. Can recognize and pick up ball (specific command "fetch" to make it search for ball?
+
+## Hardware needed
+- Raspberry Pi Zero W
+- Raspberry Pi Cam
+- Pi Cam Zero cable (separate)
+- Ultrasonic sensor
+- Additional servos
