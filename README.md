@@ -8,6 +8,9 @@ Documentation from the developer, most important links being documentatio referr
 - https://www.xgorobot.com/XgoWiki-en/wiki/1%20XGO-Mini/For%20XGO%20developer/Develop%20mode/
 - https://www.xgorobot.com/XgoWiki-en/wiki/1%20XGO-Mini/For%20XGO%20developer/Python%20Lib/
 
+Speech to text: https://www.geeksforgeeks.org/python-convert-speech-to-text-and-text-to-speech/
+OpenCV: https://docs.opencv.org/4.x/
+
 ## Video Demonstration
 https://drive.google.com/file/d/1dwJAyGvHu0s48ufkFITGkstINDWe5Ncc/view?usp=sharing
 
