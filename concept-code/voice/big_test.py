@@ -11,12 +11,9 @@ while True:
 
         for word in phrase:
             if word in commands:
-                print(f"Interpreting {word} as a command!")
+                print("Interpreting '" +word+  "' as a command!")
                 break
             else:
                 print("Command not found, continuing...")            
-    
-
-
 
 

@@ -5,7 +5,7 @@ def speech_capture():
 
     # Initialize the recognizer
     r = sr.Recognizer()
-    r.energy_threshold = 1000;
+    r.energy_threshold = 400; #1000 works well in noisy room
     r.dynamic_energy_threshold = False
 
     # Loop infinitely for user to> 
@@ -19,7 +19,8 @@ def speech_capture():
 
             # use the microphone as source for input.
             with sr.Microphone() as source2:
-
+                
+                #print("listening...")
                 # wait for a second to let the recognizer
                 # adjust the energy threshold based on
                 # the surrounding noise level
@@ -31,7 +32,9 @@ def speech_capture():
                 # Using google to recognize audio
                 MyText = r.recognize_google(audio2)
                 MyText = MyText.lower()
+                #print("information:", MyText)
                 return MyText
 
         except:
+            #print("returning nothing")
             return None
