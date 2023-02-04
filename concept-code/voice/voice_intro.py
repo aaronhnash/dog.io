@@ -20,19 +20,21 @@ def speech_capture():
             # use the microphone as source for input.
             with sr.Microphone() as source2:
                 
-                #print("listening...")
+                print("listening...")
                 # wait for a second to let the recognizer
                 # adjust the energy threshold based on
                 # the surrounding noise level
                 r.adjust_for_ambient_noise(source2, duration=0.2)
 
                 #listens for the user's input
+                print("\n\nwill i hear anything?\n\n")
                 audio2 = r.listen(source2, 5, 2)
 
+                print("i must have heard something here!")
                 # Using google to recognize audio
                 MyText = r.recognize_google(audio2)
                 MyText = MyText.lower()
-                #print("information:", MyText)
+                print("information:", MyText)
                 return MyText
 
         except:
