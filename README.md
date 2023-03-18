@@ -12,6 +12,10 @@ Speech to text: https://www.geeksforgeeks.org/python-convert-speech-to-text-and-
 
 OpenCV: https://docs.opencv.org/4.x/
 
+## Current Platform: Freenove Robot Dog
+- https://github.com/Freenove/Freenove_Robot_Dog_Kit_for_Raspberry_Pi
+- Use for all further development
+
 ## Video Demonstration
 https://drive.google.com/file/d/1dwJAyGvHu0s48ufkFITGkstINDWe5Ncc/view?usp=sharing
 
